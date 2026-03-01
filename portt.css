@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #133682;
+    width: 1100px;
+    margin-left: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+header ul {
+    display: flex;
+    gap: 100px;
+    
+
+
+}
+
+header li {
+    position: relative;
+    font-weight: 500;
+    list-style: none;
+    cursor: pointer;
+}
+
+header li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0; 
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.5s ease;
+}
+
+header li:hover::after {
+    width: 100%;
+}
+
+body {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e1e1e;
+    
+    font-family: "Poppins", sans-serif;
+}
+
+.img-lua {
+
+    left: 49%;
+    bottom: 0;
+    top: -4px;
+    right: 0;
+    z-index: 2;
+    position: absolute;
+    width: 48px;
+     animation: luapiscar 2s infinite alternate;
+}
+
+@keyframes luapiscar{
+    0% {
+        filter: drop-shadow(0 0 10px #9ddcff);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 30px #9ddcff)
+                drop-shadow(0 0 60px #9ddcff);
+    }
+}
+
+
+
+header i {
+    font-size: 32px;
+}
+.icons{
+    cursor: pointer;
+    gap: 5px;
+    margin-right: 20px;
+}
+.icon-lua{
+    width: 17px;
+}
+.icon-sol{
+    width: 27px;
+    margin-left: 2px;
+    margin-top: 7px;
+}
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+  .moldura{
+    position: relative;
+    margin-top: 70px;
+    width: 1100px;
+    height: 550px;
+    
+
+    ;
+  }
+  .moldura1{
+    position: absolute;
+    height: 480px;
+    width: 270px;
+    background-color: #918f8f;
+    margin-left: 85px;
+    margin-top: 35px;
+    clip-path: polygon(
+    35% 0%,    
+    100% 0%, 
+    100% 83%, 
+    66% 100%,  
+    0% 100%, 
+    0% 17%     );
+  }
+  .moldura h1{
+    position: absolute;
+    left: 610px;
+    top: 70px;
+    color: #133682;
+    border-radius: 60%;
+    padding: 10px;
+    font-size: 40px;
+   
+    
+
+
+  }
+  .moldura h3{
+    position: absolute;
+    left: 615px;
+    margin-top: 160px;
+    color: white;
+    overflow: hidden;
+    border-right: 3px solid #133682;
+    white-space: nowrap;
+    width: 0;
+    animation:  entrada 4 steps(30, end) forwards,
+    blink 0.7s infinite;
+  }
+
+  @keyframes entrada{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+
+    }}
+
+    @keyframes blink { 
+        50%{
+            border-color: transparent;
+        }
+    }
+  
+  .moldura p{
+    max-width: 520px;
+    position: absolute;
+    left: 500px;
+    text-align: center;
+    top: 230px;
+    max-height: 1000;
+    font-size: 18px;
+    color: white;
+  }
+  .lua1{
+    position: absolute;
+    left: 1283px;
+    top: 80px;
+    animation: piscarlua1 5s infinite alternate;
+  }
+  .lua2{
+    position: absolute;
+    top: 645px;
+    right: 1280px;
+    animation: piscarlua2 5s infinite alternate;
+  }
+  .estrelas{
+    position: absolute;
+    left: 250px;
+    bottom: 435px;
+    width: 120px;
+  }
+
+  @keyframes piscarlua1{
+    0%{
+        filter: drop-shadow( 0 0 10px #4156de);
+    }
+    100%{
+        filter: drop-shadow(0 0 30px #4156de) drop-shadow(0 0 100px #4156de);
+
+    }
+  }
+
+  @keyframes piscarlua2{
+    0%{
+        filter: drop-shadow(0 0 10px #4156de);
+    }
+    100%{
+        filter: drop-shadow(0 0 30px #4156de) drop-shadow(0 0 100px#4156de );
+    }
+  }
+  .borda{
+    
+    position: absolute;
+    left: 565px;
+    top: 200px;
+    width: 400px;
+    border: 1px solid white;
+    filter: drop-shadow(0 0 30px white)
+    drop-shadow(0 0 60px white);
+   
+  }
+  button{
+    position: absolute;
+    left: 830px;
+    top: 550px;
+    height: 45px;
+    background-color: #133682;
+    width: 250px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  button:hover{
+    background-color: #4156de;
+    filter: drop-shadow(0 0 8px#4156de);
+
+  }
+  .reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
